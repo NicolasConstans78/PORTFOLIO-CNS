@@ -9,12 +9,12 @@ function cancel() {
 }
 
 const texts = [
-    "DESIGNER UX/UI",
-    "DEVELOPPEUR",
-    "DESIGNER-GRAPHIC",
-    "WEB-DESIGNER",
-    "ILLUSTRATOR"
-      
+  "DESIGNER UX/UI",
+  "DEVELOPPEUR",
+  "DESIGNER-GRAPHIC",
+  "WEB-DESIGNER",
+  "ILLUSTRATOR"
+
 ]
 
 let speed = 100;
@@ -25,26 +25,26 @@ let textIndex = 0;
 let charcterIndex = 0;
 
 function typeWriter() {
-    if(charcterIndex < texts[textIndex].length){
-        textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
-        charcterIndex++;
-        setTimeout(typeWriter, speed); 
-    }
-    else{
-        setTimeout(eraseText, 1000)
-    }
+  if (charcterIndex < texts[textIndex].length) {
+    textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
+    charcterIndex++;
+    setTimeout(typeWriter, speed);
+  }
+  else {
+    setTimeout(eraseText, 1000)
+  }
 }
 
 function eraseText() {
-    if(textElements.innerHTML.length > 0){
-        textElements.innerHTML = textElements.innerHTML.slice(0,-1)
-        setTimeout(eraseText, 50)
-    }
-    else{
-        textIndex = (textIndex + 1) % texts.length;
-        charcterIndex = 0;
-        setTimeout(typeWriter,500)
-    }
+  if (textElements.innerHTML.length > 0) {
+    textElements.innerHTML = textElements.innerHTML.slice(0, -1)
+    setTimeout(eraseText, 50)
+  }
+  else {
+    textIndex = (textIndex + 1) % texts.length;
+    charcterIndex = 0;
+    setTimeout(typeWriter, 500)
+  }
 }
 
 window.onload = typeWriter;
@@ -74,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
- 
+
   function validateField(field) {
     let valid = true;
     const value = field.value.trim();
-    removeError(field); 
+    removeError(field);
 
     if (field.name === "nom") {
       if (value.length < 2) {
