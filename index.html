@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="cnslogo.jpg" type="cnslogo/x-icon">
+  <link rel="icon" type="cns.jpg" sizes="96x96" href="favicon-96x96.png">
+
+  <title>Portfolio CNS</title>
+  
+</head>
+<body>
+    
+<button id="scrollTopBtn" title="Retour en haut">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        NICO.<span>CNS</span>
+      </div>
+      <div class="links">
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#service">Service</a></div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+      </div>
+    </div>
+
+    <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    <div class="dropdown">
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="main-container">
+      <div class="content">
+        <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey, je m'appelle <span>NICO.CNS</span></h1>
+        <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900" class="typewriter">
+          Je suis <span class="typewriter-text"></span><label>|</label>
+        </div>
+        <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+          Designer graphique, développeur front-end et créatif passionné par le digital.
+        </p>
+        <div class="social-links">
+          <a data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-github"></i></a>
+          <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-behance"></i></a>
+          <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="btn" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1800">
+          <a href="CV CONSTANS NICOLAS.pdf" download="CV-Nicolas-Constans" class="download-btn"><button>Télécharger le CV</button></a>
+        </div>
+      </div>
+
+      <div class="image" data-aos="zoom-in" data-aos-duration="3000">
+        <img src="main.jpg" alt="Nicolas CNS">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" data-aos="fade-up" data-aos-duration="1500">
+    <h2>Contactez-moi</h2>
+    <p>N’hésitez pas à m’écrire pour un projet, une collaboration ou une question.</p>
+
+    <form class="contact-form" action="#" method="POST">
+      <div class="form-group">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Votre email" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
